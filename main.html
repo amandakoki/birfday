@@ -12,6 +12,7 @@
     body {
       margin: 0;
       min-height: 100vh;
+      /* Default background gradient for large screens */
       background: radial-gradient(circle, #8B0000, #bb3b3b, #550000, #000000);
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       position: relative;
@@ -59,6 +60,7 @@
       border-radius: 8px;
     }
 
+    /* Button styles fixed at bottom, responsive width */
     .prev-button,
     .next-button {
       position: fixed;
@@ -68,31 +70,34 @@
       background-color: #550000;
       text-align: center;
       font-size: 1em;
+      width: 40%;
+      max-width: 120px;
     }
 
     .prev-button {
-      left: 42%;
+      left: 36%;
     }
 
     .next-button {
-      right: 42%;
+      right: 36%;
     }
 
-    /* ------------------ MOBILE OVERRIDE ------------------ */
+    /* ------------------ MOBILE OVERRIDE for background gradient ------------------ */
     @media (max-width: 768px) {
       body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        /* Change background gradient to a brighter, more visible one */
+        background: linear-gradient(135deg, #ffe4e1, #fff); /* soft pink to white */
+        /* Optional: add some padding to avoid content sticking to edges */
         padding: 20px;
-        position: static;
       }
 
+      /* Make layout more flexible for small screens */
       h1 {
+        font-size: 1.5em;
         position: static;
         transform: none;
-        font-size: 1.5em;
         margin-bottom: 20px;
+        text-align: center;
       }
 
       .corner-container {
@@ -105,9 +110,9 @@
       .prev-button,
       .next-button {
         position: static;
-        margin: 10px 10px;
         width: 45%;
-        text-align: center;
+        margin: 10px 5%;
+        font-size: 0.9em;
       }
 
       .button-container {

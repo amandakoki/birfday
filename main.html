@@ -1,172 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>☾⋆｡🍷🕸️⭒⋆ ‧₊ ᵎᵎ 🍒 ⋅ ˚✮｡˚</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>☾⋆｡🍷🕸️⭒⋆ ‧₊ ᵎᵎ 🍒 ⋅ ˚✮｡˚</title>
 
-<style>
-  body {
-    margin: 0;
-    min-height: 100vh;
-    background: radial-gradient(
-      circle,
-      #8B0000,
-      #bb3b3b,
-      #550000,
-      #000000
-    );
-    position: relative;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-  
-  /* Main message styling */
-  h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 90%;
-    padding: 20px;
-    text-align: center;
-    color: black;
-  }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet" />
 
-  /* Corner containers styling */
-  .corner-container {
-    position: absolute;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    overflow: hidden;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background: rgba(0,0,0,0.5); /* Optional for better contrast */
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
-  /* Positioning for each corner */
-  .top-left {
-    top: 20px;
-    left: 20px;
-  }
-
-  .top-right {
-    top: 20px;
-    right: 20px;
-  }
-
-  .bottom-left {
-    bottom: 20px;
-    left: 20px;
-  }
-
-  .bottom-right {
-    bottom: 20px;
-    right: 20px;
-  }
-
-  /* Card styles for images inside corner containers */
-  .card {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-
-  .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Optional for styling */
-  }
-
-
-  .prev-button,
-  .next-button {
-    position: fixed; /* Use fixed to keep button in place on scrolling */
-    bottom: 20px;
-    padding: 10px 20px;
-    border-radius: 4px;
-    background-color: #550000;
-    text-align: center;
-    font-size: 1em;
-  }
-
-  /* Prev button on left side */
-  .prev-button {
-    left: 10%;
-  }
-
-  /* Next button on right side */
-  .next-button {
-    right: 10%;
-  }
-
-  /* Responsive adjustments for small screens */
-  @media (max-width: 600px) {
-    /* Reduce the size of corner containers if needed */
-    .corner-container {
-      width: 200px;
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle, #8B0000, #bb3b3b, #550000, #000000);
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      position: relative;
     }
-    /* Adjust button sizes/paddings if necessary */
-    .prev-button,
-    .next-button {
-      padding: 10px 15px;
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 90%;
+      padding: 20px;
+      text-align: center;
+      color: black;
+    }
+
+    .corner-container {
+      position: absolute;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      overflow: hidden;
+      background: rgba(0,0,0,0.5);
+      padding: 10px;
+      box-sizing: border-box;
+      color: white;
       font-size: 0.9em;
     }
-  }
-</style>
+
+    .top-right {
+      top: 20px;
+      right: 20px;
+    }
+
+    .bottom-left {
+      bottom: 20px;
+      left: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .prev-button,
+    .next-button {
+      position: fixed;
+      bottom: 20px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      background-color: #550000;
+      text-align: center;
+      font-size: 1em;
+    }
+
+    .prev-button {
+      left: 42%;
+    }
+
+    .next-button {
+      right: 42%;
+    }
+
+    /* ------------------ MOBILE OVERRIDE ------------------ */
+    @media (max-width: 768px) {
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        position: static;
+      }
+
+      h1 {
+        position: static;
+        transform: none;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+      }
+
+      .corner-container {
+        position: static;
+        width: 90%;
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      .prev-button,
+      .next-button {
+        position: static;
+        margin: 10px 10px;
+        width: 45%;
+        text-align: center;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Main message -->
-    <h1>
-        hiiii!! you've received this because we think you're cool and we value your presence in our lives <3
-        <br><br>
-        as such, we would love to have you join us in celebrating our 21st birthday :)))
-        <br><br>
-        xoxo erykah
-        <br>bisous, koki!
-    </h1>
+  <h1>
+    hiiii!! you've received this because we think you're cool and we value your presence in our lives <3
+    <br><br>
+    as such, we would love to have you join us in celebrating our 21st birthday :)))
+    <br><br>
+    xoxo, erykah<br>
+    bisous, amanda!
+  </h1>
 
-    <!-- Top right corner -->
-    <div class="corner-container top-right">
-      <div class="card">
-        <a href="inspo.html">
-          <img src="images/makeup.jpg" alt="Makeup Inspiration" />
-        </a>
-      </div>
-      <p style="color:#fff; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 0.9em;">
-        Theme: Speakeasy Soiree !<br>
-        Think Cruella Deville, 1920s, jazz, vintage...<br><br>
-        Dress code: red and its darker hues, black and white.
-      </p>
+  <!-- Top Right -->
+  <div class="corner-container top-right">
+    <div class="card">
+      <a href="https://pin.it/3SNek5k5X">
+        <img src="images/makeup.jpg" alt="Makeup Inspiration" />
+      </a>
     </div>
+    <p>
+      Theme: Speakeasy Soiree!<br>
+      Think Cruella de Vil, 1920s fashion, jazz, vintage...<br><br>
+      Dress code: red and its darker hues, black and white.
+      <br><br>
+      <font style="font-style: italic;">[ click the image for inspo ! :D ]</font>
+    </p>
+  </div>
 
-    <!-- Bottom left corner -->
-    <div class="corner-container bottom-left">
-      <p style="color:#fff; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 0.9em;">
-        Venue: Pot Belly Restaurant, Westlands<br><br>
-        Time: 6:00pm
-      </p>
-      <div class="card">
-        <a href="venue.html">
-          <img src="images/clock.jpg" alt="Venue Clock" />
-        </a>
-      </div>
+  <!-- Bottom Left -->
+  <div class="corner-container bottom-left">
+    <p>
+      Venue: Pot Belly Restaurant, Westlands<br><br>
+      Time: 5:30pm
+      <br><br>
+      <font style="font-style: italic;">[ click the image to view the menu! :)) ] </font>
+    </p>
+    <div class="card">
+      <a href="venue.html">
+        <img src="images/clock.jpg" alt="Venue Clock" />
+      </a>
     </div>
+  </div>
 
-    <!-- Navigation buttons, fixed at bottom -->
+  <!-- Buttons -->
+  <div class="button-container">
     <div class="prev-button">
       <a href="index.html" style="text-decoration: none; color: white;">Previous</a>
     </div>
-
     <div class="next-button">
       <a href="final.html" style="text-decoration: none; color: white;">Proceed</a>
     </div>
+  </div>
 
 </body>
 </html>

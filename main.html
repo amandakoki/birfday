@@ -3,16 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>welcome</title>
+<title>☾⋆｡🍷🕸️⭒⋆ ‧₊ ᵎᵎ 🍒 ⋅ ˚✮｡˚</title>
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet" />
-
 
 <style>
   body {
     margin: 0;
     min-height: 100vh;
-    position: relative; 
     background: radial-gradient(
       circle,
       #8B0000,
@@ -20,31 +18,38 @@
       #550000,
       #000000
     );
+    position: relative;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
-
+  
+  /* Main message styling */
   h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2em;
-      position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    max-width: 90%;
     padding: 20px;
-    max-width: 80%;
-    color: black; 
-    }
- 
+    text-align: center;
+    color: black;
+  }
+
+  /* Corner containers styling */
   .corner-container {
     position: absolute;
-    width: 250px; 
+    width: 250px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     overflow: hidden;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: rgba(0,0,0,0.5); /* Optional for better contrast */
+    padding: 10px;
+    box-sizing: border-box;
   }
 
- 
+  /* Positioning for each corner */
   .top-left {
     top: 20px;
     left: 20px;
@@ -65,84 +70,103 @@
     right: 20px;
   }
 
-
+  /* Card styles for images inside corner containers */
   .card {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
   }
 
   .card img {
     width: 100%;
     height: auto;
+    border-radius: 8px; /* Optional for styling */
   }
-  .prev-button {
-    position: absolute;
-    bottom: 20px;
-    left: 40%;
-    transform: translateX(-50%);
-    text-align: center;
-  }
+
+
+  .prev-button,
   .next-button {
-    position: absolute;
+    position: fixed; /* Use fixed to keep button in place on scrolling */
     bottom: 20px;
-    right: 40%;
-    transform: translateX(50%);
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #550000;
     text-align: center;
+    font-size: 1em;
   }
 
+  /* Prev button on left side */
+  .prev-button {
+    left: 10%;
+  }
 
+  /* Next button on right side */
+  .next-button {
+    right: 10%;
+  }
+
+  /* Responsive adjustments for small screens */
+  @media (max-width: 600px) {
+    /* Reduce the size of corner containers if needed */
+    .corner-container {
+      width: 200px;
+    }
+    /* Adjust button sizes/paddings if necessary */
+    .prev-button,
+    .next-button {
+      padding: 10px 15px;
+      font-size: 0.9em;
+    }
+  }
 </style>
 </head>
 <body>
 
-    <div class="title">
-        <h1>hiiii!! you've received this because we think you're cool and we value your presence in our lives <3
-          <br><br>
-          as such, we would love to have you join us in celebrating our 21st birthday :)))
-          <br><br>xoxo erykah
-          <br>bisous, koki!
-        </h1>
+    <!-- Main message -->
+    <h1>
+        hiiii!! you've received this because we think you're cool and we value your presence in our lives <3
+        <br><br>
+        as such, we would love to have you join us in celebrating our 21st birthday :)))
+        <br><br>
+        xoxo erykah
+        <br>bisous, koki!
+    </h1>
+
+    <!-- Top right corner -->
+    <div class="corner-container top-right">
+      <div class="card">
+        <a href="inspo.html">
+          <img src="images/makeup.jpg" alt="Makeup Inspiration" />
+        </a>
+      </div>
+      <p style="color:#fff; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 0.9em;">
+        Theme: Speakeasy Soiree !<br>
+        Think Cruella Deville, 1920s, jazz, vintage...<br><br>
+        Dress code: red and its darker hues, black and white.
+      </p>
     </div>
 
+    <!-- Bottom left corner -->
+    <div class="corner-container bottom-left">
+      <p style="color:#fff; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 0.9em;">
+        Venue: Pot Belly Restaurant, Westlands<br><br>
+        Time: 6:00pm
+      </p>
+      <div class="card">
+        <a href="venue.html">
+          <img src="images/clock.jpg" alt="Venue Clock" />
+        </a>
+      </div>
+    </div>
 
-<div class="corner-container top-right">
-  <div class="card">
-   <a href="inspo.html"> <img src="images/makeup.jpg" alt="width=10% height=10%" />
-  </a>
-  </div>
-  <p>
-        <font color="#fff">
-            Theme: Speakeasy Soiree !
-            <br>Think Cruella Deville, 1920s, jazz, vintage... <br><br>
-            Dress code: red and its darker hues, black and white.
-        </font>
-    </p>
-</div>
+    <!-- Navigation buttons, fixed at bottom -->
+    <div class="prev-button">
+      <a href="index.html" style="text-decoration: none; color: white;">Previous</a>
+    </div>
 
-
-
-<div class="corner-container bottom-left">
-    <p>
-        <font color="#fff">
-            Venue: Pot Belly Restaurant, Westlands<br><br>
-            Time: 6:00pm
-
-        </font>
-    </p>
-  <div class="card">
-    <a href="venue.html"><img src="images/clock.jpg" alt="Hotel 3" />
-      </a>
-  </div>
-</div>
-
-<div class="prev-button">
-  <a href="index.html" style="text-decoration: none; color: white; background-color: #550000; padding: 10px 100px; border-radius: 4px;">Previous</a>
-</div>
-<br>
-<div class="next-button">
-  <a href="final.html" style="text-decoration: none; color: white; background-color: #550000; padding: 10px 100px; border-radius: 4px;">Proceed</a>
-</div>
-
+    <div class="next-button">
+      <a href="final.html" style="text-decoration: none; color: white;">Proceed</a>
+    </div>
 
 </body>
 </html>

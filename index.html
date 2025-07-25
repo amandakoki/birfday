@@ -3,84 +3,57 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>birthday invite!</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<title>birfday invite!</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+
 <style>
   body {
     margin: 0;
     min-height: 100vh;
+    position: relative; 
     background: radial-gradient(
-      circle, 
-      #8B0000, 
+      circle,
+      #8B0000,
       #bb3b3b,
-      #550000, 
-      #000000);
-    font-family: Arial, sans-serif; /* fallback font */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+      #550000,
+      #000000
+    );
   }
 
-  /* Title styling - responsive font size and centering */
   h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: clamp(2em, 10vw, 4em); /* responsive font size */
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    color: black;
-    margin: 0 20px;
-  }
-
-  /* Make the container for the button center and responsive */
-  .proceed-button {
-    margin-top: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  /* Style the button for responsiveness */
-  .proceed-button a {
-    background-color: #550000;
-    color: white;
-    padding: 1em 3em;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: clamp(1em, 4vw, 1.5em);
-    transition: background-color 0.3s;
-  }
-
-  /* Button hover effect */
-  .proceed-button a:hover {
-    background-color: #770000;
-  }
-
-  /* Optional: Adjust font size for smaller screens */
-  @media (max-width: 600px) {
-    h1 {
-      font-size: 3vw;
+    padding: 20px;
+    max-width: 80%;
+    color: black; 
     }
-    .proceed-button a {
-      padding: 1em 2em;
-      font-size: 4vw;
+
+    .proceed-button {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
     }
-  }
 </style>
 </head>
 <body>
 
-<div class="title">
-    <h1>
-        If you're reading this, you've been invited to...<br>
-        Erykah and Koki's 21st Birthday
-    </h1>
-</div>
+    <div class="title">
+        <h1>
+            <font>If you're reading this, you've been invited to...</font><br>
+            Erykah and Koki's 21st Birthday</h1>
+    </div>
 
-<div class="proceed-button">
-    <a href="main.html">Proceed</a>
-</div>
-
+    <div class="proceed-button">
+        <a href="main.html" style="text-decoration: none; color: white; background-color: #550000; padding: 10px 100px; border-radius: 4px;">Proceed</a>
+    </div>
 </body>
 </html>

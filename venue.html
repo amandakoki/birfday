@@ -1,95 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>welcome</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>welcome</title>
 
-<style>
-  body {
-    margin: 0;
-    min-height: 100vh;
-    position: relative; 
-    background: radial-gradient(
-      circle,
-      #8B0000,
-      #bb3b3b,
-      #550000,
-      #000000
-    );
-  }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet" />
 
-  h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3em;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 20px;
-    max-width: 80%;
-    color: black; 
-  }
-
-  .prev-button {
-    position: absolute;
-    top: 75%;
-    left: 38%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  .proceed-button {
-    position: absolute;
-    top: 75%;
-    right: 25%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  /* Responsive adjustments for small screens */
-  @media (max-width: 600px) {
-    /* Keep layout same; override if needed */
-
-    /* Optional: Adjust font size for header */
-    h1 {
-      font-size: 2em;
-      padding: 10px;
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle, #8B0000, #bb3b3b, #550000, #000000);
+      position: relative;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
 
-    /* Optional: Adjust button positions or size */
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: black;
+      max-width: 90%;
+    }
+
+    h1 p {
+      font-size: 0.5em;
+      margin-top: 10px;
+    }
+
+    .prev-button,
+    .proceed-button {
+      position: absolute;
+      padding: 10px 90px;
+      background-color: #550000;
+      color: white;
+      border-radius: 4px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1em;
+    }
+
     .prev-button {
-      left: 30%; /* slightly adjust if overlapping */
+      top: 75%;
+      left: 38%;
+      transform: translate(-50%, -50%);
     }
 
     .proceed-button {
-      right: 30%;
+      top: 75%;
+      right: 40%;
+      transform: translate(50%, -50%);
     }
 
-    /* You could also hide or change styles for mobile if desired */
-    /* e.g., hide h1 or overlay layout */
-  }
-</style>
+    /* ----------- Mobile Layout ----------- */
+    @media (max-width: 768px) {
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 20px;
+      }
+
+      h1 {
+        position: static;
+        transform: none;
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      h1 p {
+        font-size: 0.9em;
+      }
+
+      .prev-button,
+      .proceed-button {
+        position: static;
+        padding: 10px 20px;
+        margin: 10px;
+        width: 80%;
+        max-width: 300px;
+      }
+
+      .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="title">
-        <h1>
-          <a href="https://whatsapp.seamlessqrcode.com/business/bwiborestaurant" style="color: #000000;">
-            Menu: </a>
-            <p style="font-size: 50%;">click the link above to view the menu</p>
-        </h1>
-    </div>
+  <!-- Title with Link -->
+  <div class="title">
+    <h1>
+      <a href="https://whatsapp.seamlessqrcode.com/business/bwiborestaurant" style="color: #000000; text-decoration: underline;">Menu:</a>
+      <p>click the link above to view the menu</p>
+    </h1>
+  </div>
 
-    <div class="prev-button">
-        <a href="main.html" style="text-decoration: none; color: white; background-color: #550000; padding: 10px 90px; border-radius: 4px;">Previous</a>
-    </div>
-
-    <div class="proceed-button">
-        <a href="final.html" style="text-decoration: none; color: white; background-color: #550000; padding: 10px 90px; border-radius: 4px;">Proceed</a>
-    </div>  
+  <!-- Buttons -->
+  <div class="button-container">
+    <a href="main.html" class="prev-button">Previous</a>
+    <a href="final.html" class="proceed-button">Proceed</a>
+  </div>
 
 </body>
 </html>

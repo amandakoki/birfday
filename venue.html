@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>welcome</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet" />
-
 
 <style>
   body {
@@ -23,9 +21,9 @@
   }
 
   h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3em;
-      position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -33,24 +31,46 @@
     padding: 20px;
     max-width: 80%;
     color: black; 
+  }
+
+  .prev-button {
+    position: absolute;
+    top: 75%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .proceed-button {
+    position: absolute;
+    top: 75%;
+    right: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  /* Responsive adjustments for small screens */
+  @media (max-width: 600px) {
+    /* Keep layout same; override if needed */
+
+    /* Optional: Adjust font size for header */
+    h1 {
+      font-size: 2em;
+      padding: 10px;
     }
 
+    /* Optional: Adjust button positions or size */
     .prev-button {
-        position: absolute;
-        top: 75%;
-        left: 38%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+      left: 30%; /* slightly adjust if overlapping */
     }
 
     .proceed-button {
-        position: absolute;
-        top: 75%;
-        right: 25%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+      right: 30%;
     }
-  
+
+    /* You could also hide or change styles for mobile if desired */
+    /* e.g., hide h1 or overlay layout */
+  }
 </style>
 </head>
 <body>
@@ -60,13 +80,11 @@
           <a href="https://whatsapp.seamlessqrcode.com/business/bwiborestaurant" style="color: #000000;">
             Menu: </a>
             <p style="font-size: 50%;">click the link above to view the menu</p>
-          </h1>
-          
+        </h1>
     </div>
 
     <div class="prev-button">
         <a href="main.html" style="text-decoration: none; color: white; background-color: #550000; padding: 10px 90px; border-radius: 4px;">Previous</a>
-        
     </div>
 
     <div class="proceed-button">

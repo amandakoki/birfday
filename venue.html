@@ -13,89 +13,56 @@
       margin: 0;
       min-height: 100vh;
       background: radial-gradient(circle, #8B0000, #bb3b3b, #550000, #000000);
-      position: relative;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
     }
 
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 3em;
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       text-align: center;
       color: black;
       max-width: 90%;
+      margin-bottom: 20px;
     }
 
     h1 p {
       font-size: 0.5em;
       margin-top: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 40px;
+      flex-wrap: wrap;
     }
 
     .prev-button,
     .proceed-button {
-      position: absolute;
-      padding: 10px 90px;
+      padding: 10px 30px;
       background-color: #550000;
       color: white;
       border-radius: 4px;
       text-align: center;
       text-decoration: none;
       font-size: 1em;
+      min-width: 120px;
     }
 
-    .prev-button {
-      top: 75%;
-      left: 38%;
-      transform: translate(-50%, -50%);
-    }
-
-    .proceed-button {
-      top: 75%;
-      right: 40%;
-      transform: translate(50%, -50%);
-    }
-
-    /* ----------- Mobile Layout ----------- */
-    @media (max-width: 768px) {
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 30px 20px;
-      }
-
-      h1 {
-        position: static;
-        transform: none;
-        font-size: 2em;
-        margin-bottom: 20px;
-      }
-
-      h1 p {
-        font-size: 0.9em;
-      }
-
-      .button-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        width: 100%;
-        margin-top: 20px;
-      }
-
+    /* ----------- Optional: Tweak button width on small screens ----------- */
+    @media (max-width: 480px) {
       .prev-button,
       .proceed-button {
-        position: static;
-        width: 35%;
+        width: 100%;
         max-width: 300px;
-        font-size: 1em;
-        padding: 10px;
-        text-align: center;
       }
     }
   </style>
@@ -106,7 +73,7 @@
   <div class="title">
     <h1>
       <a href="https://whatsapp.seamlessqrcode.com/business/bwiborestaurant" style="color: #000000; text-decoration: underline;">Menu:</a>
-      <p>click the link above to view the menu</p>
+      <p style="font-family: 'Great Vibes', cursive; font-size: 50%;" >click the link above to view the menu</p>
     </h1>
   </div>
 
